@@ -1,0 +1,6 @@
+<div class="calculator">
+    <input type="number" [value]="numero1" (input)="guardarNum1($event)" placeholder="Ingresa el primer valor">
+    <input type="number" [value]="numero2"  (input)="guardarNum2($event)" placeholder="Ingresa el segundo valor">
+    <input type="text" placeholder="Resultado" [value]="resultado" readonly>
+    <app-botones-calculadora [valor1]="numero1" [valor2]="numero2" (outputResultado)="onChanges($event)" (limpiarValores)="onClean()" ></app-botones-calculadora>
+</div>
